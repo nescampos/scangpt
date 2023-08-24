@@ -1,0 +1,41 @@
+openapi: 3.0.1
+info:
+  title: Ethereum Account Token Balance
+  description: Get the ETH and token balance of a Ethereum account.
+  version: 'v2'
+servers:
+  - url: https://scangpt.nescampos.repl.co
+paths:
+  /get_tokens_balance:
+    get:
+      operationId: getTokenBalance
+      summary: Get the token balance of a specific Ethereum account
+      parameters:
+        - in: query
+          name: account_id
+          schema:
+            type: string
+          description: The address of the Ethereum account
+        - in: query
+          name: token_id
+          schema:
+            type: string
+          description: The token name of the Token
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getAccountBalanceResponse'
+components:
+  schemas:
+    getAccountBalanceResponse:
+      type: object
+      properties:
+        account:
+          type: string
+          description: The address of the Ethereum account.
+        balance:
+          type: number
+          description: The balance of the Ethereum account.

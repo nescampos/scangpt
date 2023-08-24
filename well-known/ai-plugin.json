@@ -1,0 +1,17 @@
+{
+    "schema_version": "v1",
+    "name_for_human": "Ethereum Account Balance",
+    "name_for_model": "EthereumAccountBalance",
+    "description_for_human": "Gets the ETH and token balance of a Ethereum account.",
+    "description_for_model": "Helps the user to fetch the balance of a Ethereum account. The user can provide the address and token name and the model will make a request to the K.Transformer REST API.",
+    "auth": {
+        "type": "none"
+    },
+    "api": {
+        "type": "openapi",
+        "url": "https://scangpt.nescampos.repl.co"
+    },
+    "logo_url": "https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png",
+    "contact_email": "nescampos_18@hotmail.com",
+    "legal_info_url": "https://techgethr.com"
+}
